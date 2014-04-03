@@ -49,7 +49,7 @@
     $(document).ready(function(){
         $("#btnPostMessage").bind("click",function(e){
             e.preventDefault();
-            sendPushoverMessage("test","Hello,tingting!");
+            $.get("controller.php?type=sendmessage");
         });
     });
 </script>
