@@ -30,7 +30,9 @@
 
     <div class="container" >
         <div id="main_body_container_row">
-            <?php echo "Welcome to Home control"?>
+            <button type="button" class="btn btn-primary">Push message</button>
+            <button type="button" class="btn btn-primary">Take a picture</button>
+            <button type="button" class="btn btn-primary">Get current temperature</button>
         </div>
         <div class="footer">
             <div>
