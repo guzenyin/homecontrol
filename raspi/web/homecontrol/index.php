@@ -1,16 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home control</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-<head>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
-<title>Home Control</title>
-<script src="./js/bootstrap.min.js" type="text/javascript"></script>
-<script src="./js/jquery-1.8.3.min.js" type="text/javascript"></script>
-</head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/style.css"/>
+
+    <script src="./js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./js/Math.uuid.js" type="text/javascript"></script>
+    <script src="./js/jquery.blockUI.js" type="text/javascript"></script>
+
+  </head>
 <body>
-	<div>
-		<?php echo '<strong>Welcome to HomeControl!</strong>';?>
-	</div>
+    <div class="navbar navbar-briefcase" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Home control</a>
+        </div>       
+      </div>
+    </div>
+
+    <div class="container" >
+        <div id="main_body_container_row">
+            <?php echo "Welcome to Home control"?>
+        </div>
+        <div class="footer">
+            <div>
+                <p class="text-center">1983-2014 Tony, Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div><!-- /.container -->
 </body>
+<script type="text/javascript" charset="utf-8">
+</script>
 </html>
+
