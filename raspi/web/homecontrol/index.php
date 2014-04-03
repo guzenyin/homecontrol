@@ -33,7 +33,7 @@
             <button type="button" class="btn btn-primary">Push message</button>
             <button type="button" class="btn btn-primary">Take a picture</button>
         </div>
-        <div>
+        <div style="padding:20px;">
             <button type="button" class="btn btn-primary">Get current temperature</button>
         </div>
 
