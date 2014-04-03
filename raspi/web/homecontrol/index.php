@@ -29,11 +29,14 @@
     </div>
 
     <div class="container" >
-        <div id="main_body_container_row">
+        <div>
             <button type="button" class="btn btn-primary">Push message</button>
             <button type="button" class="btn btn-primary">Take a picture</button>
+        </div>
+        <div>
             <button type="button" class="btn btn-primary">Get current temperature</button>
         </div>
+
         <div class="footer">
             <div>
                 <p class="text-center">1983-2014 Tony, Inc. All Rights Reserved.</p>
