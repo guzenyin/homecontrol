@@ -16,8 +16,14 @@ function sendPushoverMessage(title,message){
         message:message,
         title:title
     });
-    $.post(kPushoverUrl,postData,function(data, textStatus, jqXHR){
-        alert(textStatus);
-        var result = JSON.parse(data);
-    },"json");
+    $.ajax({
+        url: kPushoverUrl,
+        type:'POST',
+        data:postData,
+        dataType:'jsonp',
+        jsonp:'jsoncallback',
+        success:function(result,status,xhr){
+
+        }
+    });
 }
