@@ -1,0 +1,32 @@
+通讯基于 http  post ，数据格式采用Json.
+
+数据格式定义如下:
+
+Request:
+{
+        "channel":"0",
+        "action":"业务类型",        
+        “reqid":"唯一标识号",
+        "reqDate":"时间",
+        data:[]
+}
+
+Response:
+{
+        "channel":"0",
+        "action":"业务类型",        
+        “reqid":"唯一标识号",          
+        "status":true/false
+}
+
+channel:
+    0:web
+    1:mobile
+    2:other
+
+action:
+
+注:
+一般报文只需要前面四个字段即可,如果需要添加额外的数据,
+需要将数据包含在data结构中,data为数组
+,其数据格式按照以后需求来定.

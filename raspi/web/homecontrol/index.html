@@ -31,8 +31,8 @@
 
     <div class="container" >
         <div>
-            <button type="button" id ="btnPostMessage" class="btn btn-primary">Push message</button>
-            <button type="button" class="btn btn-primary">Take a picture</button>
+            <button type="button" id ="btnSendMessage" class="btn btn-primary">Push message</button>
+            <button type="button" id ="btnTakePicture" class="btn btn-primary">Take a picture</button>
         </div>
         <div style="padding:20px;">
             <button type="button" class="btn btn-primary">Get current temperature</button>
@@ -47,10 +47,7 @@
 </body>
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function(){
-        $("#btnPostMessage").bind("click",function(e){
-            e.preventDefault();
-            $.get("controller.php?type=sendmessage");
-        });
+        start();
     });
 </script>
 </html>
