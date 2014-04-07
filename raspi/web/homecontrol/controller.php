@@ -11,14 +11,15 @@ header('Content-type: text/json');
 $json = null;
 $channel = null;
 $action = null;
-$id = null;
+$reqId = null;
 $data = null;
-$reqdate = null;
+$reqDate = null;
 
 $method = $_SERVER['REQUEST_METHOD'];
 if($method === "POST")
 {
     $json_string = $GLOBALS['HTTP_RAW_POST_DATA'];
+    var_dump($json_string);
     if(ini_get("magic_quotes_gpc") == "1"){
         $json_string = stripslashes($json_string);
     }
@@ -31,12 +32,13 @@ if(!is_null($json)){
     $channel = strtolower($json->channel);
     $action = strtolower($json->action);
     $data = $json->data;
-    $id = $json->id;
+    $reqId = $json->reqId;
+    $reqDate = $json->reqDate;
 
     if(is_null($channel) || is_null($action)){
         echo null;
     }elseif($channel === kChannelWeb || $channel === kChannelMobile){
-        processRequest($channel,$action,$data,$id);
+        processRequest($channel,$action,$data,$reqId);
     }else{
         echo null;
     }
@@ -66,7 +68,7 @@ function generateResponse($channel,$action,$id,$result,$errCode){
     $resp = array (
         "channel" => $channel,
         "action" => $action,
-        "id"   => $id,
+        "reqid"   => $id,
         "status" => $result,
         "errCode" => $errCode
     );
@@ -74,6 +76,10 @@ function generateResponse($channel,$action,$id,$result,$errCode){
 }
 
 function takePicture($cameraId){
+	curl_setopt_array($ch = curl_init(), array(
+    CURLOPT_URL => "http://193.169.2.109:8080/?action=snapshot"));
+    curl_exec($ch);
+    curl_close($ch);
     return array("result"=>true,"code"=>0);
 }
 

@@ -29,7 +29,8 @@ function _sendMessage(){
 }
 
 function _takePicture(){
-    doRequest(kActionTakePicture,kDispatchUrl,function(status){},[],null,null,null);
+    window.open("http://193.169.2.109:8080/?action=snapshot");
+    //doRequest(kActionTakePicture,kDispatchUrl,function(status){},[],null,null,null);
 }
 
 

@@ -7,7 +7,7 @@
     <file path="/index.php" changelist="8e63cc93-c0ee-446c-9543-d847e024d03d" time="1396531002675" ignored="false" />
     <file path="/hc.js" changelist="8e63cc93-c0ee-446c-9543-d847e024d03d" time="1396622600987" ignored="false" />
     <file path="/index.html" changelist="8e63cc93-c0ee-446c-9543-d847e024d03d" time="1396621144433" ignored="false" />
-    <file path="/controller.php" changelist="8e63cc93-c0ee-446c-9543-d847e024d03d" time="1396621495848" ignored="false" />
+    <file path="/controller.php" changelist="8e63cc93-c0ee-446c-9543-d847e024d03d" time="1396623254266" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,19 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controller.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controller.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="40" selection-start="178" selection-end="189" vertical-scroll-proportion="0.0">
+            <state line="27" column="43" selection-start="626" selection-end="626" vertical-scroll-proportion="0.5563798">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hc.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hc.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/hc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="20" selection-start="539" selection-end="551" vertical-scroll-proportion="0.421365">
+            <state line="108" column="13" selection-start="2717" selection-end="2722" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,8 +58,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$USER_HOME$/passwordService.php" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/controller.php" />
         <option value="$PROJECT_DIR$/js/hc.js" />
+        <option value="$PROJECT_DIR$/controller.php" />
       </list>
     </option>
   </component>
@@ -279,16 +279,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller.php">
+    <entry file="file://$PROJECT_DIR$/js/hc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="178" selection-end="189" vertical-scroll-proportion="0.0">
+        <state line="108" column="13" selection-start="2717" selection-end="2722" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/hc.js">
+    <entry file="file://$PROJECT_DIR$/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="539" selection-end="551" vertical-scroll-proportion="0.421365">
+        <state line="27" column="43" selection-start="626" selection-end="626" vertical-scroll-proportion="0.5563798">
           <folding />
         </state>
       </provider>
