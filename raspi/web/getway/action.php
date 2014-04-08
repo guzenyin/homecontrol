@@ -88,4 +88,50 @@ function sendMessage($title,$message){
 
     return array("result"=>true,"code"=>0);
 }
+
+function sendMail($to,$subject,$body){
+    $result = TRUE;      
+    $from = "password@orcbit.com";
+    $host = "ssl://smtp.sendgrid.net";
+    $port = "465";
+    $username = "orcbit";
+    $password = "gungYi516";
+
+
+
+    $headers = array ('From' => $from,
+                       'To' => $to,
+                       'Subject' => $subject,
+                       'Content-Type' => 'Content-Type: text/html; charset=UTF-8'
+                     );
+    $mime_params = array(
+      'text_encoding' => '7bit',
+      'text_charset'  => 'UTF-8',
+      'html_charset'  => 'UTF-8',
+      'head_charset'  => 'UTF-8'
+    );
+
+    $mime = new Mail_mime();
+    $mime->setHTMLBody($body);
+
+    $body = $mime->get($mime_params);
+    $headers = $mime->headers($headers);
+
+    $smtp = Mail::factory('smtp',array ('host' => $host,
+                                         'port' => $port,
+                                         'auth' => true,
+                                         'username' => $username,
+                                         'password' => $password
+                                         ));
+    $mail = $smtp->send($to, $headers, $body);
+
+    if(PEAR::isError($mail)){
+        $result = FALSE;
+        
+        print($mail->getMessage());
+    }
+
+    return $result;
+}
+
 ?>

@@ -14,22 +14,37 @@ var kActionTakePicture = "TakePicture" ;
 var kActionSendMessage = "SendMessage" ;
 
 function start(){
-    $("#btnSendMessage").bind("click",function(e){
+    $("#btnSendMessageViaPushover").bind("click",function(e){
         e.preventDefault();
-        _sendMessage();
+        _sendMessageViaPushover();
     });
     $("#btnTakePicture").bind("click",function(e){
         e.preventDefault();
         _takePicture();
     });
+    $("#btnGetTemp").bind("click",function(e){
+        e.preventDefault();
+        _getTemperature();
+    });
+    $("#btnSendMessageViaEmail").bind("click",function(e){
+        e.preventDefault();
+        _sendMessageViaEmail();
+    });
+
 }
 
-function _sendMessage(){
+function _sendMessageViaPushover(){
     doRequest(kActionSendMessage,kDispatchUrl,function(status){},[],null,null,null);
 }
 
 function _takePicture(){
     window.open("/snapshot.html","snapshot");
+}
+
+function _getTemperature(){
+}
+
+function _sendMessageViaEmail(){
 }
 
 ///Tool
