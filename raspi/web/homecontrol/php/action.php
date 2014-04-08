@@ -49,12 +49,9 @@ if(!is_null($json)){
 function processRequest($channel,$action,$data,$id){
     $errCode = -1;
     $result = false;
-
-    if($action === kActionTakeCamera){
-        $resultData = takePicture(0);
-        $result = $resultData["result"];
-        $errCode = $resultData["code"];
-    }elseif($action === kActionSendMessage){
+    $data = array();
+    
+    if($action === kActionSendMessage){
         $resultData = sendMessage("Test","Hello,world!");
         $result = $resultData["result"];
         $errCode = $resultData["code"];
@@ -64,7 +61,7 @@ function processRequest($channel,$action,$data,$id){
 }
 
 
-function generateResponse($channel,$action,$id,$result,$errCode){
+function generateResponse($channel,$action,$id,$result,$errCode,$data){
     $resp = array (
         "channel" => $channel,
         "action" => $action,
@@ -73,26 +70,6 @@ function generateResponse($channel,$action,$id,$result,$errCode){
         "errCode" => $errCode
     );
     return $resp;
-}
-
-function takePicture($cameraId){
-    $remote = "http://localhost:8080/?action=snapshot";
-    $name = date("Y-m-d H:i",time());
-    $local = dirname(__FILE__).$name.".jpg";
-    curl_download($remote,$local);   
-    return array("result"=>true,"code"=>0);
-}
-
-function curl_download($remote, $local) {
-     $cp = curl_init($remote);
-     $fp = fopen($local, "w");
-    
-    curl_setopt($cp, CURLOPT_FILE, $fp);
-    curl_setopt($cp, CURLOPT_HEADER, 0);
-    
-    curl_exec($cp);
-    curl_close($cp);
-    fclose($fp);    
 }
 
 function sendMessage($title,$message){

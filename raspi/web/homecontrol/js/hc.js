@@ -29,9 +29,8 @@ function _sendMessage(){
 }
 
 function _takePicture(){
-    doRequest(kActionTakePicture,kDispatchUrl,function(status){},[],null,null,null);
+    window.open("/snapshot.html","snapshot");
 }
-
 
 ///Tool
 Date.prototype.format = function(format){
