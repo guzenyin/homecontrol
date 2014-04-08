@@ -8,7 +8,7 @@
 
 //const for Pushover;
 
-var kDispatchUrl = "controller.php";
+var kDispatchUrl = "/getway/controller.php";
 var kChannelWeb = "web";
 var kActionTakePicture = "TakePicture" ;
 var kActionSendMessage = "SendMessage" ;
