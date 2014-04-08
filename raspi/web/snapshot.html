@@ -29,11 +29,6 @@
             <div>
                 <div id="webcam"></div>
             </div>
-            <div class="footer">
-                <div>
-                    <p class="text-center">1983-2014 Tony, Inc. All Rights Reserved.</p>
-                </div>
-            </div>
         </div><!-- /.container -->
     </body>
 
@@ -48,10 +43,10 @@
       img.style.zIndex = -1;
       img.onload = imageOnload;
       img.onclick = imageOnclick;
-      img.src = "cam_snapshot.php?id=" + (++imageNr);
+      img.src = "/getway/cam_snapshot.php?id=" + (++imageNr);
       var webcam = document.getElementById("webcam");
       webcam.insertBefore(img, webcam.firstChild);
-    }
+}
 
     function imageOnload() {
       this.style.zIndex = imageNr;
