@@ -1,11 +1,11 @@
 <?php
 
-define("kChannelWeb","Web");
-define("kChannelMobile","Mobile");
-define("kChannelOther","Other");
+define("kChannelWeb","web");
+define("kChannelMobile","mobile");
+define("kChannelOther","other");
 
-define("kActionTakePicture","TakePicture");
-define("kActionSendMessage","SendMessage");
+define("kActionTakePicture","takepicture");
+define("kActionSendMessage","sendmessage");
 
 header('Content-type: text/json');
 $json = null;
@@ -18,8 +18,7 @@ $reqDate = null;
 $method = $_SERVER['REQUEST_METHOD'];
 if($method === "POST")
 {
-    $json_string = $GLOBALS['HTTP_RAW_POST_DATA'];
-    var_dump($json_string);
+    $json_string = file_get_contents("php://input");
     if(ini_get("magic_quotes_gpc") == "1"){
         $json_string = stripslashes($json_string);
     }
