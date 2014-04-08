@@ -76,11 +76,23 @@ function generateResponse($channel,$action,$id,$result,$errCode){
 }
 
 function takePicture($cameraId){
-	curl_setopt_array($ch = curl_init(), array(
-    CURLOPT_URL => "http://193.169.2.109:8080/?action=snapshot"));
-    curl_exec($ch);
-    curl_close($ch);
+    $remote = "http://localhost:8080/?action=snapshot";
+    $name = date("Y-m-d H:i",time());
+    $local = dirname(__FILE__).$name.".jpg";
+    curl_download($remote,$local);   
     return array("result"=>true,"code"=>0);
+}
+
+function curl_download($remote, $local) {
+     $cp = curl_init($remote);
+     $fp = fopen($local, "w");
+    
+    curl_setopt($cp, CURLOPT_FILE, $fp);
+    curl_setopt($cp, CURLOPT_HEADER, 0);
+    
+    curl_exec($cp);
+    curl_close($cp);
+    fclose($fp);    
 }
 
 function sendMessage($title,$message){

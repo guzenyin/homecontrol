@@ -29,8 +29,7 @@ function _sendMessage(){
 }
 
 function _takePicture(){
-    window.open("http://localhost:8080/?action=snapshot");
-    //doRequest(kActionTakePicture,kDispatchUrl,function(status){},[],null,null,null);
+    doRequest(kActionTakePicture,kDispatchUrl,function(status){},[],null,null,null);
 }
 
 
